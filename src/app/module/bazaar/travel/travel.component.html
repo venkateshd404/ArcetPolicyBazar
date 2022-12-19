@@ -1,0 +1,397 @@
+<app-header></app-header>
+<!-- View Plans  Begin -->
+<section class="insur_section pt-5" id="ViewPlansSection" *ngIf = "showPlan && !showTravel && !showPayment">
+    <div class="layered_bg mt-5">
+        <div class="text-center mb-3"><h3>View Plans</h3></div>
+        <div class="plandetails_outer">
+            <div class="plandetails_inner">
+                <div class="plandetails_row">
+                    <div class="row">
+                        <div class="plandetails_logo col-md-2 align-self-center">
+                            <img src="assets/images/aditya.png" width="100%" alt="" style="width: 80px;">
+                        </div>
+                        <div class="plandetails_title col-md-8">
+                            <h3 class="logo_title">Aditya Birla Capital</h3>
+                            <div class="singleline_info row">
+                                <div class="col-4">
+                                    <label for="coverage">Coverage Amount :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$150,000</option>
+                                        <option>$170,000</option>
+                                        <option>$190,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Medical Expenses :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$100,000</option>
+                                        <option>$110,000</option>
+                                        <option>$150,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Trip Duration :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>14</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plandetails_buttons col-md-2">
+                            <p style="margin-top: 10px;">Premium : <span> $800</span></p>
+                            <button (click)="BuyNow()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="plandetails_row">
+                    <div class="row">
+                        <div class="plandetails_logo col-md-2 align-self-center">
+                            <img src="assets/images/manipal.png" width="100%" alt="" style="width: 80px;">
+                        </div>
+                        <div class="plandetails_title col-md-8">
+                            <h3 class="logo_title">The Manipal Group</h3>
+                            <div class="singleline_info row">
+                                <div class="col-4">
+                                    <label for="coverage">Coverage Amount :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$145,000</option>
+                                        <option>$160,000</option>
+                                        <option>$180,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Medical Expenses :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$96,000</option>
+                                        <option>$105,000</option>
+                                        <option>$120,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Trip Duration :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>15</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plandetails_buttons col-md-2">
+                            <p style="margin-top: 10px;">Premium : <span>$785</span></p>
+                            <button (click)="BuyNow()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="plandetails_row">
+                    <div class="row">
+                        <div class="plandetails_logo col-md-2 align-self-center">
+                            <img src="assets/images/universal.png" width="100%" alt="" style="width: 80px;">
+                        </div>
+                        <div class="plandetails_title col-md-8">
+                            <h3 class="logo_title">Universal Sompo</h3>
+                            <div class="singleline_info row">
+                                <div class="col-4">
+                                    <label for="coverage">Coverage Amount :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$147,000</option>
+                                        <option>$165,000</option>
+                                        <option>$178,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Medical Expenses :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>$93,300</option>
+                                        <option>$102,000</option>
+                                        <option>$118,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="coverage">Trip Duration :</label>
+                                    <select class="form-select form-select-sm">
+                                        <option>17</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plandetails_buttons col-md-2">
+                            <p style="margin-top: 10px;">Premium : <span> $850</span></p>
+                            <button (click)="BuyNow()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- View Plans End -->
+
+<!-- Travellers Information Begin -->
+<section class="insur_section pt-5 pb-4 insur_form" id="TravellersSection" *ngIf = "!showPlan && showTravel && !showPayment">
+    <div class="layered_bg mt-5">
+        <div class="text-center mb-3"><h3>Travel Insurance</h3></div>
+        <div class="insur_section1 px-2">
+            <div class="row" style="background: white !important;opacity: 0.9;border-radius: 10px !important;padding-top: 5px;">
+                <div class="col-md-6 col-sm-12 effect-outer mb-1">
+                    <label for="country">Destination</label>
+                    <input id="country" class="effect" type="text" placeholder="USA">
+                </div>
+                <div class="col-md-2 col-sm-3 mb-3 datepicker-outer">
+                    <div class="datepicker">
+                        <label for="startdate">Start Date</label>
+                        <input type="date" class="effect" id="startdate" placeholder="2022-12-15" value="2022-12-15" name="date">
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 mb-1 datepicker-outer">
+                    <div class="datepicker">
+                        <label for="enddate">End Date</label>
+                        <input type="date" class="effect" id="enddate" placeholder="2022-12-31" value="2022-12-31" name="date">
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 mb-1">
+                    <label for="peoplecount">No. of Travellers</label>
+                    <div class="nooftravels-outer">
+                        <div class="nooftravels">
+                            <button>-</button>
+                            <input id="traveller-count" class="traveller-count" placeholder="2">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+        <div class="insur_section2">
+            <div class="row" style="margin-top:5px;">
+                <div class="col-md-3 col-sm-6 effect-outer mb-3">
+                    <label for="country">Proposer Name</label>
+                    <input id="country" class="effect" type="text" placeholder="John Joe">
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                    <label for="phnumber">Phone Number</label>
+                    <input class="effect" type="text" id="phnumber" placeholder="111-222-3333" name="phnumber">
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                    <label for="emailid">Email Id</label>
+                    <input class="effect" type="email" id="emailid" placeholder="exampleemail@gmail.com" name="emailid">
+                </div>
+                
+            </div>
+        </div>
+        <div class="travellerdetail_outer">
+            <div class="travellerdetail_header"><h5>Traveller(s) Details</h5></div>
+            <div class="travellerdetail_inner">
+                <div class="accordion custom_accord" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Traveller 1</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="name1">Name</label>
+                                        <input class="effect" type="text" id="name1" placeholder="John Joe" name="name">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="age1">Age</label>
+                                        <input class="effect" type="text" id="age1" placeholder="32years" name="age">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="gender1">Gender</label>
+                                        <input class="effect" type="text" id="gender1" placeholder="Male" name="gender">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="passportid1">Passport Number</label>
+                                        <input class="effect" type="text" id="passportid1" placeholder="5624587458" name="passport">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="nationality1">Nationality</label>
+                                        <input class="effect" type="text" id="nationality1" placeholder="American" name="nationality">
+                                    </div>
+                                    <div class="col-md-9 col-sm-12 mb-3 effect-outer">
+                                        <label for="address1">Address</label>
+                                        <input class="effect" type="text" id="address1" placeholder="1-241A 11B, Down Street, Colombia" name="address">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="proposer1">Proposer</label>
+                                        <input class="effect" type="text" id="proposer1" placeholder="David Joe" name="proposer">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="relation1">Relation With Proposer</label>
+                                        <input class="effect" type="text" id="relation1" placeholder="Father" name="relation">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Traveller 2</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 row">
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="name2">Name</label>
+                                        <input class="effect" type="text" id="name2" placeholder="Charle Joe" name="name">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="age2">Age</label>
+                                        <input class="effect" type="text" id="age2" placeholder="28years" name="age">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="gender2">Gender</label>
+                                        <input class="effect" type="text" id="gender2" placeholder="Female" name="gender">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="passportid2">Passport Number</label>
+                                        <input class="effect" type="text" id="passportid2" placeholder="958745874" name="passport">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="nationality1">Nationality</label>
+                                        <input class="effect" type="text" id="nationality1" placeholder="American" name="nationality">
+                                    </div>
+                                    <div class="col-md-9 col-sm-12 mb-3 effect-outer">
+                                        <label for="address1">Address</label>
+                                        <input class="effect" type="text" id="address1" placeholder="1-241A 11B, Down Street, Colombia" name="address">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="proposer1">Proposer</label>
+                                        <input class="effect" type="text" id="proposer1" placeholder="David Joe" name="proposer">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3 effect-outer">
+                                        <label for="relation1">Relation With Proposer</label>
+                                        <input class="effect" type="text" id="relation1" placeholder="Father" name="relation">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="button_section text-right mt-3 text-end">
+        <a (click)="Continue()" class="btn btn-primary">Continue</a>
+    </div>
+</section>
+
+<!-- Travellers Information End -->
+
+<!-- Order Payment Begin -->
+<section class="insur_section pt-5 backimage" *ngIf = "!showPlan && !showTravel && showPayment">
+    <div class="layered_bg mt-5">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="prem_summary">
+                    <h4>Insurance Summary</h4>
+                    <div class="prem_sum_details">
+                        <div class="sum_detail_labels">
+                            <label>Destination</label>
+                            <label class="detail_label_value">USA</label>
+                        </div>
+                        <div class="sum_detail_labels">
+                            <label>Trip Duration</label>
+                            <label class="detail_label_value">17 days</label>
+                        </div>
+                        <div class="sum_detail_labels">
+                            <label>Phone Number</label>
+                            <label class="detail_label_value">111-222-3333</label>
+                        </div>
+                        <div class="sum_detail_labels">
+                            <label>No. of travellers</label>
+                            <label class="detail_label_value">2</label>
+                        </div>
+                    </div>
+                    <h5>Plan Selected</h5>
+                    <div class="plans_select row">
+                        <div class="col-4">
+                            <img src="assets/images/aditya.png" alt="" style="width: 64px;">
+                        </div>
+                        <div class="col-8">
+                            <h6 class="">Aditya Birla Capital</h6>
+                            <p class="">Coverage Amount : <span> $150,000</span></p>
+                        </div>
+                        <div class="col-12">
+                            <div class="sum_detail_labels cl_black">
+                                <label>Total Premium</label>
+                                <label class="detail_label_value">$800</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="prem_payment">
+                    <h4>Payment Options</h4>
+						<h5>How would you like to pay?</h5>
+                        <div class=" prem_payment_inner">
+                            <div class="tab-content">
+                                <div id="home" class="container tab-pane active"><br>
+									<div class="card_option_inputs">
+                                        <div class="">
+                                            <a href=""><img src="assets/images/mastercard_icon.png" alt="" style="width:55px;margin-right:5px;"></a>
+                                            <a href=""><img src="assets/images/visa_icon.png" alt="" style="width: 55px; margin-right:5px;"></a>
+                                                <a href=""><img src="assets/images/discover_icon.png" alt="" style="width: 55px; margin-right:5px;"></a>
+                                                <a href=""><img src="assets/images/americanexp_icon.png" alt="" style="width: 55px; margin-right:5px;"></a>
+										</div>
+                                        <div class="">
+											<input type="text" class="form-control mt-2" placeholder="Card number">
+											<input type="text" class="form-control mt-3" placeholder="MM/YY">
+											<input type="text" class="form-control mt-3" placeholder="CVV">
+											<input type="text" class="form-control mt-3" placeholder="Card name">
+										</div>
+									</div>
+								</div>
+                                <div id="menu1" class="container tab-pane fade"><br>
+									<h5>Bank account type?</h5>
+									<div class="radio mb-4">
+										<label class="bank_option_label"><input type="radio" name="account" checked="">Savings</label>
+										<label class="bank_option_label"><input type="radio" name="account">Checking</label>
+									</div>
+									<h5>Is this a business account?</h5>
+									<div class="radio mb-4">
+										<label class="bank_option_label"><input type="radio" name="accounttype" checked="">Yes</label>
+										<label class="bank_option_label"><input type="radio" name="accounttype">No</label>
+									</div>
+									<div class="input-group mb-4">
+										<input id="routing_number" type="text" class="form-control" name="routing_number" placeholder="Routing number">
+										<span class="input-group-text">
+											<img src="assets/images/question_help_icon.png" alt="">
+										</span>
+									</div>
+									<div class="input-group mb-4">
+										<input id="account_number" type="text" class="form-control" name="account_number" placeholder="Account number">
+										<span class="input-group-text">
+											<img src="assets/images/question_help_icon.png" alt="">
+										</span>
+									</div>
+									<div class="efta_link mb-2">
+										<a href="#"><img src="assets/images/exportarrow.svg" alt="">Electronic Funds Transfer Authorization</a>
+									</div>
+									<div class="checkbox">
+										<label><input type="checkbox" value=""> I authorize payment of the amount due today and accept the Electronics Funds Transfer Authorization.</label>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="button_section text-right mt-3 text-end">
+		<a (click)="Proceed()" class="btn btn-primary">Proceed</a>
+	</div>
+	<div class="button_section text-right mt-3 text-start" style="left: 15px !important;right: auto;">
+		<a (click)="BuyNow()" class="btn btn-primary">Back</a>
+	</div>
+</section>
+<!-- Order Payment End -->
